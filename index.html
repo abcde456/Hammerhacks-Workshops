@@ -8,13 +8,42 @@
                 width: 600px
                 height: auto;
             }
+
+            h1 {
+                color: red;
+            }
         </style>
-        
+
     </head>
     <body>
         <h1>My Cool Website</h1>
         <p>I think HTML is neat!</p>
 
         <img src="https://b2232832.smushcdn.com/2232832/wp-content/uploads/2020/02/Anglo-American.jpg?lossy=1&strip=0&webp=1">
+
+        <blockquote>"You guys are trying to stop Musial in 15 minutes while the National League ain’t stopped him in 15 years." - Yogi Berra</blockquote>
+        <button onclick="changeQuote()">Change quote</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote(){
+                var quotes = [
+                    `"This is a very generic quote" - Yazan`,
+                    `"Generic quote again" - Yazan`,
+                    `"Generic Quote number 96" - Yazan`,
+                    `"You guys are trying to stop Musial in 15 minutes while the National League ain’t stopped him in 15 years." - Yogi Berra`,
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if(index >= 4){
+                    index = 0;
+                }
+
+            }
+        </script>
     </body>
 </html>
